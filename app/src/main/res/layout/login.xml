@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:id="@+id/BtnConnexion"
+        android:layout_marginBottom="111dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Identifiant"
+        android:id="@+id/TxTID"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/eTxtID"
+        android:layout_alignStart="@+id/eTxtID"
+        android:layout_alignRight="@+id/eTxtID"
+        android:layout_alignEnd="@+id/eTxtID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/eTxtMdp"
+        android:layout_marginBottom="44dp"
+        android:layout_above="@+id/BtnConnexion"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eTxtID"
+        android:layout_below="@+id/TxTID"
+        android:layout_alignLeft="@+id/eTxtMdp"
+        android:layout_alignStart="@+id/eTxtMdp"
+        android:layout_alignRight="@+id/BtnConnexion"
+        android:layout_alignEnd="@+id/BtnConnexion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe"
+        android:id="@+id/TxTMdp"
+        android:layout_above="@+id/eTxtMdp"
+        android:layout_alignLeft="@+id/eTxtMdp"
+        android:layout_alignStart="@+id/eTxtMdp" />
+
+</RelativeLayout>
