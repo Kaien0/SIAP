@@ -77,7 +77,9 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
         android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7" />
+        android:layout_alignEnd="@+id/textView7"
+        android:imeOptions="actionNext"
+        android:inputType="text"/>
 
     <Button
         android:layout_width="wrap_content"

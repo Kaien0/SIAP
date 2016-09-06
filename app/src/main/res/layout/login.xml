@@ -32,7 +32,8 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:layout_alignRight="@+id/eTxtMdp"
-        android:layout_alignEnd="@+id/eTxtMdp" />
+        android:layout_alignEnd="@+id/eTxtMdp"
+        android:inputType="text"/>
 
     <Button
         android:layout_width="wrap_content"
