@@ -19,6 +19,7 @@
         <activity
             android:name=".LoginActivity" />
         <activity android:name=".formulaireparcActivity" />
+        <activity android:name=".AccueilActivity"/>
 
     </application>
 
