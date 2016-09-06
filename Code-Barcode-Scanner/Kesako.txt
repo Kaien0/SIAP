@@ -1,0 +1,1 @@
+Les deux fichiers sont les codes à utiliser pour pouvoir utiliser l'application "Barcode Scanner" qui permet de lire des codes barres ainsi que des QR Code.

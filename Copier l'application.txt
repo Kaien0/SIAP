@@ -1,0 +1,9 @@
+Pour copier l'application :
+
+Dans le Terminal sous Android Studio : git clone -b PCKaien https://github.com/Kaien0/SIAP
+
+Pensez à se connecter sur votre compte Github sous Android Studio "FIle/Settings/Version Controle/GitHub
+
+Pensez à telecharger Git si vous êtes sur Windows : https://desktop.github.com/
+et spéficier le chemin : File/Settings/Version Control/git/Patch to Git executable "Par défaut : C:\Program Files\Git\cmd\git.exe
+
