@@ -26,8 +26,9 @@ public class formulaireparcActivity extends Activity{//On peut passer par une Li
         Cursor c = bd.RecupererToutUser();
         startManagingCursor(c);
 
-        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this.getBaseContext(), R.layout.formulaireparc, c, new String[]{"_id", "motdepasse"});
-        bd.close();
+        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this, R.layout.affichageuser, c, new String[]{"_id", "motdepasse"},
+                new int[] {R.id.TxTid, R.id.TxTmdp});
+
 
         String[] mStrings = {
                 "Nikola", "Marceau", "Pablo", "Jimmy", "Quentin",
@@ -43,8 +44,9 @@ public class formulaireparcActivity extends Activity{//On peut passer par une Li
         };
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.formulairetexteview, R.id.textview, mStrings);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.formulairetexteview, R.id.textview, mStrings);
        formParc.setAdapter(mAdapter);
+        bd.close();
     }
     }
 

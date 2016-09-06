@@ -40,7 +40,7 @@ public class GestionBD {
     public long ajouterUser(Utilisateur user){
         ContentValues v = new ContentValues();
         v.put("_id", user.getNom());
-        v.put("mdp", user.getmdp());
+        v.put("motdepasse", user.getmdp());
         return db.insert("utilisateur", null, v);
     }
 
