@@ -10,8 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class CreationCompteActivity extends Activity {
- //VOIR le xml pour enlever le retour chariot
-    //android:imeOptions="ActionNext"
+    GestionBD db;
     final String EXTRA_ID = "user_id";
     final String EXTRA_MDP = "user_mdp";
 
@@ -20,9 +19,12 @@ public class CreationCompteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.creationcompte);
 
+        final Utilisateur user = new Utilisateur(null,null);
         final EditText compte = (EditText)findViewById(R.id.eTxtCompte);
         final EditText mdp1 = (EditText)findViewById(R.id.eTxTMdp1);
         final EditText mdp2 = (EditText)findViewById(R.id.eTxTMdp2);
+        db = new GestionBD(this);
+        db.open();
 
 
         Button annuler = (Button)findViewById(R.id.BtnAnnuler);
@@ -45,11 +47,22 @@ public class CreationCompteActivity extends Activity {
                     Toast.makeText(CreationCompteActivity.this, "Les mots de passes ne sont pas identiques", Toast.LENGTH_LONG).show();
                 }
                 else{
+                    //Essaie de set un Utilisateur et ajout Bdd
+                    try{
+                        user.setNom(compte.getText().toString());
+                        user.setMdp(mdp1.getText().toString());
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    db.ajouterUser(user);
+                    Toast.makeText(CreationCompteActivity.this, "Utilisateur ajouté à la BDD", Toast.LENGTH_LONG).show();
+                    db.close();
+                    //Retour à l'activité Login avec passage de données
                     Intent i = new Intent(CreationCompteActivity.this, LoginActivity.class);
                     i.putExtra(EXTRA_ID, compte.getText().toString());
                     i.putExtra(EXTRA_MDP, mdp1.getText().toString());
                     startActivity(i);
-
                 }
 
 
