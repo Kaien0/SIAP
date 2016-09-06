@@ -9,7 +9,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.logo); //activity_main
+        setContentView(R.layout.logo);
 
         final Thread ThBienvenue = new Thread() {
             public void run() {
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
                     e.printStackTrace();
 
                 } finally {
-                    Intent i = new Intent(MainActivity.this, AccueilActivity.class);
+                    Intent i = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(i);
                     finish();
                 }
