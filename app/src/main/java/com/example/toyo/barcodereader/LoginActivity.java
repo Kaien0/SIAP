@@ -42,9 +42,7 @@ public class LoginActivity extends Activity {
                 else {
                     Intent i = new Intent(LoginActivity.this, AccueilActivity.class);
                     startActivity(i);
-
                 }
-
             }
         });
 

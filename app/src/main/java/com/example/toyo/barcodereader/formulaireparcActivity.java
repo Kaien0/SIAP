@@ -2,18 +2,19 @@ package com.example.toyo.barcodereader;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 
-/**
- * Created by Kaien on 01/09/16.
- * test github
- */
-public class formulaireparcActivity extends Activity{ //On peut passer par une ListActivity, a voir les avantages
+
+public class formulaireparcActivity extends Activity{//On peut passer par une ListActivity, a voir les avantages
+    GestionBD bd = new GestionBD(this);
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -21,6 +22,12 @@ public class formulaireparcActivity extends Activity{ //On peut passer par une L
         setContentView(R.layout.formulaireparc);
        ListView formParc = (ListView)findViewById(R.id.list);
 
+        bd.read();
+        Cursor c = bd.RecupererToutUser();
+        startManagingCursor(c);
+
+        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this.getBaseContext(), R.layout.formulaireparc, c, new String[]{"_id", "motdepasse"});
+        bd.close();
 
         String[] mStrings = {
                 "Nikola", "Marceau", "Pablo", "Jimmy", "Quentin",
@@ -37,7 +44,7 @@ public class formulaireparcActivity extends Activity{ //On peut passer par une L
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.formulairetexteview, R.id.textview, mStrings);
-       formParc.setAdapter(adapter);
+       formParc.setAdapter(mAdapter);
     }
     }
 

@@ -13,13 +13,14 @@ public class BdHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        final String req = "CREATE TABLE utilisateur(id integer primary key autoincrement, nom, motdepasse)";
+        final String req = "CREATE TABLE utilisateur(id integer primary key autoincrement, _id, motdepasse)";
         db.execSQL(req);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        final String req = "DROP TABLE IF EXISTS utilisateur;";
+        onCreate(db);
     }
 }

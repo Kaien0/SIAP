@@ -1,9 +1,10 @@
 package com.example.toyo.barcodereader;
 
-
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 
 public class GestionBD {
     private SQLiteDatabase db;
@@ -15,21 +16,30 @@ public class GestionBD {
     }
     private void init(){
 
-
-
     }
 
     public void open(){
         db = bdH.getWritableDatabase();
     }
 
+    public void read(){
+        db = bdH.getReadableDatabase();
+    }
+
     public void close(){
         db.close();
     }
 
+    public Cursor RecupererToutUser(){
+        String[] user = new String[]{"_id", "motdepasse"};
+        String req = "SELECT * FROM utilisateur;";
+        Cursor c = db.rawQuery(req, null);
+        return c;
+    }
+
     public long ajouterUser(Utilisateur user){
         ContentValues v = new ContentValues();
-        v.put("nom", user.getNom());
+        v.put("_id", user.getNom());
         v.put("mdp", user.getmdp());
         return db.insert("utilisateur", null, v);
     }
