@@ -20,6 +20,7 @@
             android:name=".LoginActivity" />
         <activity android:name=".formulaireparcActivity" />
         <activity android:name=".AccueilActivity"/>
+        <activity android:name=".CreationCompteActivity"/>
 
     </application>
 
