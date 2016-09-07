@@ -3,7 +3,7 @@ package com.example.toyo.barcodereader;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
-//Test github ...s
+
 public class MainActivity extends Activity {
 
     @Override
