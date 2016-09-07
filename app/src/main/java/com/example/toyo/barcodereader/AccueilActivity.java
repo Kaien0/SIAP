@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class AccueilActivity extends AppCompatActivity implements OnClickListener  {
+public class AccueilActivity extends Activity implements OnClickListener  {
     private Button scanBtn, loginBtn, formulaireBtn;
     private TextView formatTxt, contentTxt;
 
@@ -54,8 +54,6 @@ public class AccueilActivity extends AppCompatActivity implements OnClickListene
             scanIntegrator.initiateScan();
         }
     }
-
-
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
