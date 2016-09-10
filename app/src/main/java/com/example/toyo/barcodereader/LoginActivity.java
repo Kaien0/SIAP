@@ -40,6 +40,10 @@ public class LoginActivity extends Activity {
 
                 }
                 else {
+                    String method = "login";
+                    BackgroundTask backgroundTask = new BackgroundTask(LoginActivity.this);
+                    backgroundTask.execute(method,ID.getText().toString(), PW.getText().toString());
+
                     Intent i = new Intent(LoginActivity.this, AccueilActivity.class);
                     startActivity(i);
                 }
