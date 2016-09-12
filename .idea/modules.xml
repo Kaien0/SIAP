@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppSIAP.iml" filepath="$PROJECT_DIR$/AppSIAP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mysql-connector-java-5.1.39-bin/mysql-connector-java-5.1.39-bin.iml" filepath="$PROJECT_DIR$/mysql-connector-java-5.1.39-bin/mysql-connector-java-5.1.39-bin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/postgresql-9.4.1210/postgresql-9.4.1210.iml" filepath="$PROJECT_DIR$/postgresql-9.4.1210/postgresql-9.4.1210.iml" />
     </modules>
   </component>
 </project>
