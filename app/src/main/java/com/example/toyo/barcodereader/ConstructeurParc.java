@@ -20,17 +20,18 @@ import java.net.URLEncoder;
 /**
  * Created by bashark on 12/09/2016.
  */
-public class ConstructeurJeu extends AsyncTask<String, String, String>{
-    Context ctx;
-    //test commit
-    public ConstructeurJeu(Context ctx){
+public class ConstructeurParc extends AsyncTask<String, String, String> {
+    private Context ctx;
+
+
+    public ConstructeurParc(Context ctx){
         this.ctx = ctx;
     }
 
     @Override
     protected String doInBackground(String... params) {
         String result = "";
-        String url_form = "http://Kaien.fr/constructeurJeu.php";
+        String url_form = "http://Kaien.fr/constructeurParc.php";
         String id = params[0];
         try {
             URL url = new URL(url_form);
