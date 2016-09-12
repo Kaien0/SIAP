@@ -130,7 +130,4 @@ public class AccueilActivity extends Activity implements OnClickListener  {
 
     }
 
-
-
-
 }
