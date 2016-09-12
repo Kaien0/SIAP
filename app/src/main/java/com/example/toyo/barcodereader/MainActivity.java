@@ -3,7 +3,7 @@ package com.example.toyo.barcodereader;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
-
+//Test
 public class MainActivity extends Activity {
 
     @Override
@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
             public void run() {
 
                 try {
-                    sleep(5000);
+                    sleep(1000);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();

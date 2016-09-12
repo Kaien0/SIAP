@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ici la question"
+        android:id="@+id/LIB_question"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="réponse A"
+        android:id="@+id/BTN_reponse_A"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="reponse B"
+        android:id="@+id/BTN_reponse_B"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="réponse C"
+        android:id="@+id/BTN_reponse_C"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Réponse D"
+        android:id="@+id/BTN_reponse_D"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:visibility="visible" />
+</LinearLayout>

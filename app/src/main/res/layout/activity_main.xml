@@ -46,4 +46,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Questions"
+        android:id="@+id/Btn_questions"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btn_Login"
+        android:layout_alignEnd="@+id/btn_Login" />
+
 </RelativeLayout>
