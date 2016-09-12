@@ -22,7 +22,7 @@ import java.net.URLEncoder;
  */
 public class ConstructeurJeu extends AsyncTask<String, String, String>{
     Context ctx;
-
+    //test commit
     public ConstructeurJeu(Context ctx){
         this.ctx = ctx;
     }
