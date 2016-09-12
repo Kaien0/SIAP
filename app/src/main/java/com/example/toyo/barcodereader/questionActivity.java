@@ -35,14 +35,14 @@ public class questionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question);
 
-        final Jeu jeu = new Jeu(this, "2");
+        final Parc parc = new Parc(this, "2");
 //        Log.d("FORMULAIRE",form.getId());
 //        Log.d("FORMULAIRE", form.getNom());
 
         Boolean next = false;
 
-        for (int i = 0; i < jeu.getFormulaire().getLST_question().size(); i++){
-            genererQuestion(jeu.getFormulaire());
+        for (int i = 0; i < parc.getJeu(0).getFormulaire().getLST_question().size(); i++){
+            genererQuestion(parc.getJeu(0).getFormulaire());
         }
 
 
