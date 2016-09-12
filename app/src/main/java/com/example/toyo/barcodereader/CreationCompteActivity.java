@@ -49,6 +49,12 @@ public class CreationCompteActivity extends Activity {
                 else{
                     //Essaie de set un Utilisateur et ajout Bdd
                     try{
+                        String c = compte.getText().toString();
+                        String m = mdp1.getText().toString();
+                        String method = "register";
+                        BackgroundTask backgroundTask = new BackgroundTask(CreationCompteActivity.this);
+                        backgroundTask.execute(method, c, m);
+                        finish();
                         user.setNom(compte.getText().toString());
                         user.setMdp(mdp1.getText().toString());
                     }
@@ -56,13 +62,13 @@ public class CreationCompteActivity extends Activity {
                         e.printStackTrace();
                     }
                     db.ajouterUser(user);
-                    Toast.makeText(CreationCompteActivity.this, "Utilisateur ajouté à la BDD", Toast.LENGTH_LONG).show();
                     db.close();
                     //Retour à l'activité Login avec passage de données
                     Intent i = new Intent(CreationCompteActivity.this, LoginActivity.class);
                     i.putExtra(EXTRA_ID, compte.getText().toString());
                     i.putExtra(EXTRA_MDP, mdp1.getText().toString());
                     startActivity(i);
+
                 }
 
 

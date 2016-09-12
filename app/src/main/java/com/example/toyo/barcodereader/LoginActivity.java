@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.lang.String;
+import java.util.concurrent.ExecutionException;
 
 public class LoginActivity extends Activity {
 
@@ -40,8 +41,24 @@ public class LoginActivity extends Activity {
 
                 }
                 else {
-                    Intent i = new Intent(LoginActivity.this, AccueilActivity.class);
-                    startActivity(i);
+                    String method = "login";
+                    BackgroundTask backgroundTask = new BackgroundTask(LoginActivity.this);
+                    backgroundTask.execute(method,ID.getText().toString(), PW.getText().toString());
+                    try {
+                        String auth = backgroundTask.get().toString();
+                        if(auth.equals("  LoginOK!")){
+                            Intent i = new Intent(LoginActivity.this, AccueilActivity.class);
+                            startActivity(i);
+                        }
+                        else{
+                           Toast.makeText(LoginActivity.this, "Identifiant incconu", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    }
+
                 }
             }
         });
