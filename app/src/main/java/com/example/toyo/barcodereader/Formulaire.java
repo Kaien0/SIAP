@@ -26,7 +26,6 @@ public class Formulaire {
         try {
             reponse = form.execute("2").get();
             LST_reponse = reponse.split("<br/>");
-            Log.d("CONSTRUCTEUR", reponse);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -37,12 +36,8 @@ public class Formulaire {
             id = LST_reponse[0];
             nom = LST_reponse[1];
             id_version_precedente = LST_reponse[2];
-            Log.d("CONSTUCTEURFORMULAIRE", id);
-            Log.d("CONSTUCTEURFORMULAIRE", nom);
-            Log.d("CONSTUCTEURFORMULAIRE", id_version_precedente);
             for(int i = 3; i < LST_reponse.length; i++){
-                LST_question.add(new Question(ctx, LST_reponse[i]));
-                Log.d("CONTRUCTEURFORMULAIRE", "Question "+(i-3)+": "+LST_question.get(i-3).getTexte());
+            LST_question.add(new Question(ctx, LST_reponse[i]));
             }
         }
 

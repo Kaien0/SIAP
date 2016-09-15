@@ -20,10 +20,10 @@ import java.net.URLEncoder;
 /**
  * Created by bashark on 12/09/2016.
  */
-public class ConstructeurJeu extends AsyncTask<String, String, String>{
+public class constructeurJeu extends AsyncTask<String, String, String>{
     Context ctx;
     //test commit
-    public ConstructeurJeu(Context ctx){
+    public constructeurJeu(Context ctx){
         this.ctx = ctx;
     }
 

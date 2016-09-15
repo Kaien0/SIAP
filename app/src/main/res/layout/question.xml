@@ -11,7 +11,13 @@
         android:id="@+id/LIB_question"
         android:gravity="center_vertical|center_horizontal"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="20px" />
 
     <Button
         android:layout_width="fill_parent"
@@ -20,7 +26,14 @@
         android:id="@+id/BTN_reponse_A"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:textColor="@color/foreground_material_dark"
+        android:background="@color/colorPrimary"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="20px" />
 
     <Button
         android:layout_width="fill_parent"
@@ -29,7 +42,14 @@
         android:id="@+id/BTN_reponse_B"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/foreground_material_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="20px" />
 
     <Button
         android:layout_width="fill_parent"
@@ -38,7 +58,14 @@
         android:id="@+id/BTN_reponse_C"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/foreground_material_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="20px" />
 
     <Button
         android:layout_width="fill_parent"
@@ -47,5 +74,8 @@
         android:id="@+id/BTN_reponse_D"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/foreground_material_dark"
+        android:textSize="30sp" />
 </LinearLayout>

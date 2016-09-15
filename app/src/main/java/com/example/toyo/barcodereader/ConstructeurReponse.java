@@ -79,7 +79,6 @@ public class ConstructeurReponse extends AsyncTask<String, String, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Log.d("AAAAA","FIN ASYNC CONSTRUCT REPONSE");
 
     }
 }

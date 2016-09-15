@@ -18,7 +18,7 @@ public class Jeu {
         String result = "";
         String[] LST_result = null;
 
-        ConstructeurJeu jeu = new ConstructeurJeu(ctx);
+        constructeurJeu jeu = new constructeurJeu(ctx);
         try {
             result = jeu.execute(id).get();
             LST_result = result.split("<br/>");

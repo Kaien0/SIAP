@@ -258,34 +258,6 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        if(result.equals("Registration Success..."))
-        {
-            Toast.makeText(ctx, "Enregistrement reussi", Toast.LENGTH_LONG).show();
-        }
-        else if(result.equals("  LoginOK!")){
-//           alertDialog.setMessage("ON EST CONNECTEEE");
-            Toast.makeText(ctx, "Authentification reussie", Toast.LENGTH_SHORT).show();
-        }
-        /*else if (result.equals("  LeParcExiste")){
-            Toast.makeText(ctx, "Le parc existe", Toast.LENGTH_LONG).show();
-
-        }
-        else if (result.equals("  LeParcNexistePas")){
-            Toast.makeText(ctx, "Le parc n'existe pas", Toast.LENGTH_LONG).show();
-        }*/
-        else if(result.contains("Question")){
-
-        }
-        else if(result.contains("ConstructQuestions")){
-            //String[] TabConstructQuestion  = result.split("<br/>"); //Separe le result sur les retour lignes
-            //this.TaskFinishedEvent.OnTaskFinishedEvent(TabConstructQuestion);
-        }
-        else
-        {
-            Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-            //alertDialog.setMessage(result);
-            //alertDialog.show();
-        }
 
     }
 
