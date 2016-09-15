@@ -39,15 +39,16 @@ public class questionActivity extends Activity {
 //        Log.d("FORMULAIRE",form.getId());
 //        Log.d("FORMULAIRE", form.getNom());
 
+        Agent agent = new Agent(this, "1");
+        Log.d("AGENT_ID",agent.getId());
+        Log.d("AGENT_NOM",agent.getNom());
+        Log.d("AGNET_MDP",agent.getMdp());
+
         Boolean next = false;
 
         for (int i = 0; i < parc.getJeu(0).getFormulaire().getLST_question().size(); i++){
             genererQuestion(parc.getJeu(0).getFormulaire());
         }
-
-
-
-
 
     }
 

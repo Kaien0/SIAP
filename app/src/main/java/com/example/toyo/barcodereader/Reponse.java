@@ -32,7 +32,7 @@ public class Reponse {
             e.printStackTrace();
         }
 
-        Log.d("CCCCCC","FIN CONSTRUCTEUR REPONSE");
+
 
 
 

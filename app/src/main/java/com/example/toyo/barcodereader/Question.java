@@ -46,7 +46,6 @@ public class Question {
             while(r < EXTRA_TabQuest.length)
             {
                 LST_reponse.add(new Reponse(ctx, EXTRA_TabQuest[r]));
-                Log.d("ARRAYLISTREPONSE", LST_reponse.get(r-3).getTexte());
                 r++;
             }
 
@@ -60,7 +59,6 @@ public class Question {
             e.printStackTrace();
         }
 
-        Log.d("CONSTRUCTQUESTION", "FIN CONSTRUCT QUESTION");
     }
 
     public String getNom() {
