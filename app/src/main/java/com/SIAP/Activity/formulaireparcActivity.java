@@ -1,15 +1,13 @@
-package com.example.toyo.barcodereader;
+package com.SIAP.Activity;
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
 
+import com.SIAP.BDD.SQLite.GestionBD;
+import com.SIAP.R;
 
 
 public class formulaireparcActivity extends Activity{//On peut passer par une ListActivity, a voir les avantages
@@ -26,7 +24,7 @@ public class formulaireparcActivity extends Activity{//On peut passer par une Li
         Cursor c = bd.RecupererToutUser();
         startManagingCursor(c);
 
-        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this, R.layout.affichageuser, c, new String[]{"_id", "motdepasse"},
+        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this, R.layout.affichageuser, c, new String[]{"nom_agent", "mdp_agent"},
                 new int[] {R.id.TxTid, R.id.TxTmdp});
 
 
