@@ -1,0 +1,13 @@
+Installation manuelle d'une application Android.
+
+Depuis Adroid studio;
+	- Se rendre dans l'onglet "Build"
+	- Choisir "Build APK"
+	- Dans les messages de log, cliquer sur "Show in Explorer"
+	
+Copier le .APK 
+
+Brancher le périphérique Android et accéder au dossier dans lequel le .APK sera déplacé, faire un clic droit + coller.
+
+Une fois celà fait, ouvrir le dossier depuis l'explorateur de fichier du périphérique android et cliquer sur l'APK.
+Choisir installer et confirmer l'installation.
