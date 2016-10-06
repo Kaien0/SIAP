@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 
-import com.example.toyo.barcodereader.R;
+import com.SIAP.R;
+
 
 //Test
 public class MainActivity extends Activity {

@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 import com.SIAP.BDD.SQLite.GestionBD;
 import com.SIAP.BDD.SQLite.AsyncTaskRegister;
-import com.example.toyo.barcodereader.R;
+import com.SIAP.R;
+
 
 public class CreationCompteActivity extends Activity {
     GestionBD db;

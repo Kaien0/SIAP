@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.SIAP.Classes.Question;
-import com.example.toyo.barcodereader.R;
+
+import com.SIAP.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import android.content.Intent;
@@ -14,7 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+//
 public class AccueilActivity extends Activity implements OnClickListener  {
     private Button scanBtn, loginBtn, formulaireBtn, questionsBtn;
     private TextView formatTxt, contentTxt;
@@ -50,11 +51,11 @@ public class AccueilActivity extends Activity implements OnClickListener  {
 
         scanBtn.setOnClickListener(this);
 
-        questionsBtn = (Button) findViewById(R.id.Btn_questions);
+       questionsBtn = (Button) findViewById(R.id.Btn_questions);
         questionsBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AccueilActivity.this, questionActivity.class);
+                Intent i = new Intent(AccueilActivity.this, questionActivity.class); //Probleme car Question.constructeurQuestion commenté
                 startActivity(i);
             }
         });

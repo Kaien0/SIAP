@@ -10,7 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.SIAP.BDD.SQLite.AsyncTaskLogin;
-import com.example.toyo.barcodereader.R;
+import com.SIAP.R;
+
 
 import java.lang.String;
 import java.util.concurrent.ExecutionException;

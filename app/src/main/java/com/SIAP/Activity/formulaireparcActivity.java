@@ -7,7 +7,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.SIAP.BDD.SQLite.GestionBD;
-import com.example.toyo.barcodereader.R;
+import com.SIAP.R;
 
 
 public class formulaireparcActivity extends Activity{//On peut passer par une ListActivity, a voir les avantages
