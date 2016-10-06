@@ -1,13 +1,9 @@
-package com.SIAP.Activity;
+package com.example.toyo.barcodereader;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 
-import com.SIAP.R;
-
-
-//Test
 public class MainActivity extends Activity {
 
     @Override
@@ -15,12 +11,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logo);
 
-
         final Thread ThBienvenue = new Thread() {
             public void run() {
 
                 try {
-                    sleep(1000);
+                    sleep(5000);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
